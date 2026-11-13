@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 570" width="1100" height="570" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d"><title id="t">Evaluation protocol</title><desc id="d">Five fold models give pooled out-of-fold CV scores and an averaged-probability ensemble for the locked test; the SVM is one model; test confidence intervals resample near-duplicate groups.</desc><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8895A7"/></marker></defs><rect width="1100" height="570" rx="14" fill="#FFFFFF"/>
+<text x="550" y="34" font-size="19" font-weight="700" fill="#1F2933" text-anchor="middle" >Evaluation protocol: what is scored, when, and how uncertainty is measured</text>
+<rect x="40" y="60" width="480" height="104" rx="10" fill="#EEF2F6" stroke="#8895A7" stroke-width="1.6"/>
+<text x="280.0" y="99.0" font-size="15" font-weight="600" fill="#1F2933" text-anchor="middle" >Development set (2096 images)</text>
+<text x="280.0" y="117.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >fold k = validation, other four folds = training</text>
+<text x="280.0" y="135.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >early stopping and best-epoch choice use the validation fold</text>
+<rect x="600" y="60" width="460" height="104" rx="10" fill="#F6DCE3" stroke="#B5415D" stroke-width="1.6"/>
+<text x="830.0" y="99.0" font-size="15" font-weight="600" fill="#1F2933" text-anchor="middle" >Locked test set (320 images)</text>
+<text x="830.0" y="117.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >touched once per model, after all choices are frozen</text>
+<text x="830.0" y="135.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >no retuning afterwards</text>
+<rect x="40" y="214" width="230" height="84" rx="10" fill="#DCE8F5" stroke="#4C78A8" stroke-width="1.6"/>
+<text x="155.0" y="252.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >CNN / ResNet18</text>
+<text x="155.0" y="270.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >5 fold models</text>
+<rect x="290" y="214" width="230" height="84" rx="10" fill="#E6E6E6" stroke="#6B6B6B" stroke-width="1.6"/>
+<text x="405.0" y="252.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >SVM</text>
+<text x="405.0" y="270.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >1 model on all dev data</text>
+<polyline points="155,164 155,212" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="405,164 405,212" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="600" y="214" width="230" height="84" rx="10" fill="#DCE8F5" stroke="#4C78A8" stroke-width="1.6"/>
+<text x="715.0" y="243.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >Fold ensemble</text>
+<text x="715.0" y="261.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >average softmax of</text>
+<text x="715.0" y="279.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >the 5 fold models</text>
+<rect x="850" y="214" width="210" height="84" rx="10" fill="#E6E6E6" stroke="#6B6B6B" stroke-width="1.6"/>
+<text x="955.0" y="243.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >SVM prediction</text>
+<text x="955.0" y="261.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >single model,</text>
+<text x="955.0" y="279.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >no ensemble</text>
+<polyline points="715,164 715,212" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="955,164 955,212" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="215,298 215,334 660,334 660,300" fill="none" stroke="#8895A7" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#ah)"/>
+<polyline points="330,298 330,356 900,356 900,300" fill="none" stroke="#8895A7" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#ah)"/>
+<text x="540" y="326" font-size="12" font-weight="400" fill="#52606D" text-anchor="start" >frozen models are applied to the test set</text>
+<rect x="40" y="402" width="480" height="70" rx="10" fill="#E3F1E7" stroke="#3C8D5A" stroke-width="1.6"/>
+<text x="280.0" y="433.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >CV score</text>
+<text x="280.0" y="451.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >pooled out-of-fold predictions (2096 images), all three models</text>
+<polyline points="100,298 100,400" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="460,298 460,400" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="600" y="402" width="460" height="70" rx="10" fill="#E3F1E7" stroke="#3C8D5A" stroke-width="1.6"/>
+<text x="830.0" y="433.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >Test score + uncertainty</text>
+<text x="830.0" y="451.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >macro-F1, accuracy; 2000 group-bootstrap resamples; paired differences</text>
+<polyline points="770,298 770,400" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="1010,298 1010,400" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="40" y="494" width="1020" height="54" rx="10" fill="#FFF4CC" stroke="#B58900" stroke-width="1.6"/>
+<text x="550.0" y="517.0" font-size="13.5" font-weight="600" fill="#1F2933" text-anchor="middle" >Known biases (kept visible)</text>
+<text x="550.0" y="535.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >CV is slightly optimistic: best-epoch selection on the validation fold (about +1.4 points); ResNet18 was also tuned on folds 0-2</text>
+</svg>

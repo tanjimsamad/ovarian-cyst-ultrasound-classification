@@ -1,0 +1,4 @@
+model,macro_f1,macro_f1_ci_low,macro_f1_ci_high,accuracy,correct,n
+CNN,0.822,0.767,0.871,0.853,273,320
+SVM,0.767,0.702,0.822,0.816,261,320
+ResNet18,0.832,0.781,0.878,0.859,275,320

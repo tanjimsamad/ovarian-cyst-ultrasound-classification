@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 520" width="1180" height="520" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d"><title id="t">ResNet18 fine-tuning architecture</title><desc id="d">ImageNet-pretrained ResNet18: a 7x7 stem, four stages of two residual BasicBlocks with 64,128,256,512 channels, global average pooling and a new 5-way linear head; all layers are fine-tuned.</desc><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8895A7"/></marker></defs><rect width="1180" height="520" rx="14" fill="#FFFFFF"/>
+<text x="590" y="34" font-size="19" font-weight="700" fill="#1F2933" text-anchor="middle" >ResNet18 (torchvision, ImageNet-pretrained) fine-tuned end to end</text>
+<rect x="24" y="100" width="100" height="110" rx="10" fill="#EEF2F6" stroke="#8895A7" stroke-width="1.6"/>
+<text x="74.0" y="142.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >Input</text>
+<text x="74.0" y="160.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >224x224x3</text>
+<text x="74.0" y="178.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >letterboxed</text>
+<polyline points="124,155 148,155" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="150" y="100" width="120" height="110" rx="10" fill="#FBE4D3" stroke="#E07B39" stroke-width="1.6"/>
+<text x="210.0" y="133.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >conv1 + pool</text>
+<text x="210.0" y="151.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >7x7, 64, stride 2</text>
+<text x="210.0" y="169.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >BN, ReLU, MaxPool</text>
+<text x="210.0" y="187.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >-> 56x56x64</text>
+<rect x="285" y="100" width="120" height="110" rx="10" fill="#FBE4D3" stroke="#E07B39" stroke-width="1.6"/>
+<text x="345.0" y="133.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >layer1</text>
+<text x="345.0" y="151.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >2 x BasicBlock</text>
+<text x="345.0" y="169.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >64 ch</text>
+<text x="345.0" y="187.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >-> 56x56</text>
+<rect x="420" y="100" width="120" height="110" rx="10" fill="#FBE4D3" stroke="#E07B39" stroke-width="1.6"/>
+<text x="480.0" y="133.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >layer2</text>
+<text x="480.0" y="151.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >2 x BasicBlock</text>
+<text x="480.0" y="169.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >128 ch, stride 2</text>
+<text x="480.0" y="187.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >-> 28x28</text>
+<rect x="555" y="100" width="120" height="110" rx="10" fill="#FBE4D3" stroke="#E07B39" stroke-width="1.6"/>
+<text x="615.0" y="133.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >layer3</text>
+<text x="615.0" y="151.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >2 x BasicBlock</text>
+<text x="615.0" y="169.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >256 ch, stride 2</text>
+<text x="615.0" y="187.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >-> 14x14</text>
+<rect x="690" y="100" width="120" height="110" rx="10" fill="#FBE4D3" stroke="#E07B39" stroke-width="1.6"/>
+<text x="750.0" y="133.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >layer4</text>
+<text x="750.0" y="151.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >2 x BasicBlock</text>
+<text x="750.0" y="169.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >512 ch, stride 2</text>
+<text x="750.0" y="187.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >-> 7x7x512</text>
+<polyline points="270,155 283,155" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="405,155 418,155" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="540,155 553,155" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="675,155 688,155" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="810,155 832,155" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="834" y="100" width="110" height="110" rx="10" fill="#FBE4D3" stroke="#E07B39" stroke-width="1.6"/>
+<text x="889.0" y="142.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >Avg pool</text>
+<text x="889.0" y="160.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >global</text>
+<text x="889.0" y="178.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >-> 512</text>
+<polyline points="944,155 966,155" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="968" y="100" width="130" height="110" rx="10" fill="#E3F1E7" stroke="#3C8D5A" stroke-width="1.6"/>
+<text x="1033.0" y="142.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >New head</text>
+<text x="1033.0" y="160.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >Linear 512->5</text>
+<text x="1033.0" y="178.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >softmax</text>
+<polyline points="150,226 150,236 944,236 944,226" fill="none" stroke="#E07B39" stroke-width="1.8"/>
+<text x="547" y="256" font-size="13" font-weight="600" fill="#B55A1F" text-anchor="middle" >initialised from ImageNet weights, all layers trainable (nothing frozen)</text>
+<polyline points="968,226 968,236 1098,236 1098,226" fill="none" stroke="#3C8D5A" stroke-width="1.8"/>
+<text x="1033" y="256" font-size="12.5" font-weight="600" fill="#2E6F47" text-anchor="middle" >random init</text>
+<text x="350" y="300" font-size="15" font-weight="700" fill="#1F2933" text-anchor="middle" >Inside one BasicBlock</text>
+<rect x="60" y="330" width="120" height="56" rx="10" fill="#FBE4D3" stroke="#E07B39" stroke-width="1.6"/>
+<text x="120.0" y="354.0" font-size="13.5" font-weight="600" fill="#1F2933" text-anchor="middle" >Conv 3x3</text>
+<text x="120.0" y="372.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >BN + ReLU</text>
+<rect x="230" y="330" width="120" height="56" rx="10" fill="#FBE4D3" stroke="#E07B39" stroke-width="1.6"/>
+<text x="290.0" y="354.0" font-size="13.5" font-weight="600" fill="#1F2933" text-anchor="middle" >Conv 3x3</text>
+<text x="290.0" y="372.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >BN</text>
+<circle cx="410" cy="358" r="17" fill="#FFFFFF" stroke="#E07B39" stroke-width="1.6"/>
+<text x="410" y="365" font-size="20" font-weight="700" fill="#1F2933" text-anchor="middle" >+</text>
+<rect x="460" y="336" width="80" height="44" rx="10" fill="#FBE4D3" stroke="#E07B39" stroke-width="1.6"/>
+<text x="500.0" y="363.0" font-size="13.5" font-weight="600" fill="#1F2933" text-anchor="middle" >ReLU</text>
+<polyline points="30,358 58,358" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="180,358 228,358" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="350,358 391,358" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="427,358 458,358" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="30,358 30,420 410,420 410,377" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<text x="220" y="438" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >skip connection (identity; 1x1 conv when shape changes)</text>
+<polyline points="540,358 570,358" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="640" y="306" width="500" height="130" rx="10" fill="#EEF2F6" stroke="#8895A7" stroke-width="1.6"/>
+<text x="890.0" y="340.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >Training recipe (per fold)</text>
+<text x="890.0" y="358.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >AdamW lr 2.87e-4, weight decay 6.2e-3, batch 32, moderate augmentation,</text>
+<text x="890.0" y="376.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >label smoothing 0.05; ReduceLROnPlateau on val macro-F1; patience 15</text>
+<text x="890.0" y="394.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >Optuna: 20 trials, tuned on folds 0-2 only (trial 19 reported)</text>
+<text x="890.0" y="412.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >Reported model: 5 early-stopped fold models, probabilities averaged</text>
+<text x="590" y="490" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >A 100-epoch run without early stopping stalled after ~epoch 30 (best-vs-last-epoch macro-F1 0.891 vs 0.877), so the early-stopped runs are reported.</text>
+</svg>

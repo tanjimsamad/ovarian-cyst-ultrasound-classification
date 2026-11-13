@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 470" width="1180" height="470" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d"><title id="t">Custom CNN architecture ('deeper')</title><desc id="d">Six Conv3x3-BatchNorm-ReLU-MaxPool blocks with 32,32,64,64,128,128 filters, global average pooling, a 128-unit dropout head and a 5-way softmax output.</desc><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8895A7"/></marker></defs><rect width="1180" height="470" rx="14" fill="#FFFFFF"/>
+<text x="590" y="34" font-size="19" font-weight="700" fill="#1F2933" text-anchor="middle" >Custom CNN (reported variant 'deeper'): 6 conv blocks + global-average-pool head</text>
+<rect x="24" y="150" width="96" height="120" rx="10" fill="#EEF2F6" stroke="#8895A7" stroke-width="1.6"/>
+<text x="72.0" y="188.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >Input</text>
+<text x="72.0" y="206.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >224x224x3</text>
+<text x="72.0" y="224.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >letterboxed,</text>
+<text x="72.0" y="242.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >ImageNet-norm</text>
+<polyline points="120,210 148,210" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="150" y="111.50196853444982" width="100" height="196.99606293110037" rx="10" fill="#DCE8F5" stroke="#4C78A8" stroke-width="1.6"/>
+<text x="200.0" y="179.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >Block 1</text>
+<text x="200.0" y="197.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >Conv3x3 32</text>
+<text x="200.0" y="215.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >BN + ReLU</text>
+<text x="200.0" y="233.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >MaxPool 2</text>
+<text x="200.0" y="251.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >-> 112x112x32</text>
+<polyline points="250,210 264,210" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="264" y="130.1001113587127" width="100" height="159.7997772825746" rx="10" fill="#DCE8F5" stroke="#4C78A8" stroke-width="1.6"/>
+<text x="314.0" y="179.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >Block 2</text>
+<text x="314.0" y="197.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >Conv3x3 32</text>
+<text x="314.0" y="215.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >BN + ReLU</text>
+<text x="314.0" y="233.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >MaxPool 2</text>
+<text x="314.0" y="251.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >-> 56x56x32</text>
+<polyline points="364,210 378,210" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="378" y="143.2509842672249" width="100" height="133.49803146555018" rx="10" fill="#DCE8F5" stroke="#4C78A8" stroke-width="1.6"/>
+<text x="428.0" y="179.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >Block 3</text>
+<text x="428.0" y="197.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >Conv3x3 64</text>
+<text x="428.0" y="215.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >BN + ReLU</text>
+<text x="428.0" y="233.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >MaxPool 2</text>
+<text x="428.0" y="251.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >-> 28x28x64</text>
+<polyline points="478,210 492,210" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="492" y="152.55005567935635" width="100" height="114.8998886412873" rx="10" fill="#DCE8F5" stroke="#4C78A8" stroke-width="1.6"/>
+<text x="542.0" y="179.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >Block 4</text>
+<text x="542.0" y="197.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >Conv3x3 64</text>
+<text x="542.0" y="215.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >BN + ReLU</text>
+<text x="542.0" y="233.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >MaxPool 2</text>
+<text x="542.0" y="251.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >-> 14x14x64</text>
+<polyline points="592,210 606,210" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="606" y="159.12549213361245" width="100" height="101.74901573277509" rx="10" fill="#DCE8F5" stroke="#4C78A8" stroke-width="1.6"/>
+<text x="656.0" y="179.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >Block 5</text>
+<text x="656.0" y="197.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >Conv3x3 128</text>
+<text x="656.0" y="215.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >BN + ReLU</text>
+<text x="656.0" y="233.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >MaxPool 2</text>
+<text x="656.0" y="251.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >-> 7x7x128</text>
+<polyline points="706,210 720,210" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="720" y="164.60769515458674" width="100" height="90.78460969082653" rx="10" fill="#DCE8F5" stroke="#4C78A8" stroke-width="1.6"/>
+<text x="770.0" y="179.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >Block 6</text>
+<text x="770.0" y="197.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >Conv3x3 128</text>
+<text x="770.0" y="215.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >BN + ReLU</text>
+<text x="770.0" y="233.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >MaxPool 2</text>
+<text x="770.0" y="251.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >-> 3x3x128</text>
+<polyline points="820,210 842,210" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="844" y="160" width="90" height="100" rx="10" fill="#DCE8F5" stroke="#4C78A8" stroke-width="1.6"/>
+<text x="889.0" y="188.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >GAP</text>
+<text x="889.0" y="206.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >global avg</text>
+<text x="889.0" y="224.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >pool</text>
+<text x="889.0" y="242.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >-> 128</text>
+<polyline points="934,210 952,210" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="954" y="150" width="118" height="120" rx="10" fill="#DCE8F5" stroke="#4C78A8" stroke-width="1.6"/>
+<text x="1013.0" y="179.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >Head</text>
+<text x="1013.0" y="197.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >Linear 128->128</text>
+<text x="1013.0" y="215.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >ReLU</text>
+<text x="1013.0" y="233.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >Dropout 0.46</text>
+<text x="1013.0" y="251.0" font-size="11.5" font-weight="400" fill="#52606D" text-anchor="middle" >Linear 128->5</text>
+<polyline points="1072,210 1090,210" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="1092" y="170" width="78" height="80" rx="10" fill="#E3F1E7" stroke="#3C8D5A" stroke-width="1.6"/>
+<text x="1131.0" y="206.0" font-size="13" font-weight="600" fill="#1F2933" text-anchor="middle" >Softmax</text>
+<text x="1131.0" y="224.0" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >5 classes</text>
+<text x="590" y="350" font-size="13" font-weight="400" fill="#52606D" text-anchor="middle" >Classes: Endometrioma | Normal ovary | PCO | Serous cystadenoma | Teratoma</text>
+<rect x="24" y="372" width="1132" height="72" rx="10" fill="#EEF2F6" stroke="#8895A7" stroke-width="1.6"/>
+<text x="590.0" y="395.0" font-size="14" font-weight="600" fill="#1F2933" text-anchor="middle" >Training recipe (per fold, 5 folds)</text>
+<text x="590.0" y="413.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >AdamW lr 3.05e-4, weight decay 1e-3, batch 32, mild affine augmentation, label smoothing 0.02, dropout 0.46</text>
+<text x="590.0" y="431.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >ReduceLROnPlateau on val macro-F1 (x0.5, patience 4), early stopping patience 15, up to 100 epochs, best-F1 checkpoint</text>
+<text x="590" y="62" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >Feature-map size after each block shown as H x W x channels; box height is only a visual hint of resolution</text>
+</svg>

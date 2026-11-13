@@ -1,0 +1,5 @@
+split,comparison,macro_f1_diff,ci_low,ci_high,ci_excludes_zero
+locked test,ResNet18 - CNN,0.0095,-0.039,0.06,False
+locked test,ResNet18 - SVM,0.0645,0.013,0.119,True
+locked test,CNN - SVM,0.055,-0.002,0.117,False
+5-fold CV (pooled),ResNet18 - CNN,0.06,0.041,0.079,True

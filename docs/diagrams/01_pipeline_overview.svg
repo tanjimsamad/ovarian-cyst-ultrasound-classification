@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" width="1100" height="520" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d"><title id="t">Project pipeline overview</title><desc id="d">Images are letterboxed, clustered into near-duplicate groups, split into a locked test set and five CV folds, used to train a CNN, an SVM and a ResNet18, then compared with group-bootstrap confidence intervals.</desc><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8895A7"/></marker></defs><rect width="1100" height="520" rx="14" fill="#FFFFFF"/>
+<text x="550" y="34" font-size="19" font-weight="700" fill="#1F2933" text-anchor="middle" >Ovarian ultrasound 5-class classification: end-to-end pipeline</text>
+<rect x="40" y="60" width="210" height="76" rx="10" fill="#EEF2F6" stroke="#8895A7" stroke-width="1.6"/>
+<text x="145.0" y="85.0" font-size="15" font-weight="600" fill="#1F2933" text-anchor="middle" >Raw images</text>
+<text x="145.0" y="103.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >5 classes, 2 sources</text>
+<text x="145.0" y="121.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >PCOSGen + MMOTU</text>
+<rect x="300" y="60" width="210" height="76" rx="10" fill="#EEF2F6" stroke="#8895A7" stroke-width="1.6"/>
+<text x="405.0" y="85.0" font-size="15" font-weight="600" fill="#1F2933" text-anchor="middle" >Letterbox 224x224</text>
+<text x="405.0" y="103.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >keep aspect ratio,</text>
+<text x="405.0" y="121.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >pad with black</text>
+<rect x="560" y="60" width="210" height="76" rx="10" fill="#EEF2F6" stroke="#8895A7" stroke-width="1.6"/>
+<text x="665.0" y="85.0" font-size="15" font-weight="600" fill="#1F2933" text-anchor="middle" >Near-duplicate groups</text>
+<text x="665.0" y="103.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >dHash &lt;= 8 bits and</text>
+<text x="665.0" y="121.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >pixel corr >= 0.90</text>
+<rect x="820" y="60" width="210" height="76" rx="10" fill="#EEF2F6" stroke="#8895A7" stroke-width="1.6"/>
+<text x="925.0" y="85.0" font-size="15" font-weight="600" fill="#1F2933" text-anchor="middle" >Group-aware split</text>
+<text x="925.0" y="103.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >StratifiedGroupKFold,</text>
+<text x="925.0" y="121.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >no group in two sets</text>
+<polyline points="250,98 298,98" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="510,98 558,98" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="770,98 818,98" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="925,136 925,160" fill="none" stroke="#8895A7" stroke-width="1.8"/>
+<polyline points="925,160 430,160" fill="none" stroke="#8895A7" stroke-width="1.8"/>
+<polyline points="430,160 430,188" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="925,160 925,188" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="60" y="190" width="740" height="60" rx="10" fill="#EEF2F6" stroke="#8895A7" stroke-width="1.6"/>
+<text x="430.0" y="216.0" font-size="15" font-weight="600" fill="#1F2933" text-anchor="middle" >Development set: 5 cross-validation folds</text>
+<text x="430.0" y="234.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >2096 images; used for training, tuning and early stopping</text>
+<rect x="840" y="190" width="190" height="60" rx="10" fill="#F6DCE3" stroke="#B5415D" stroke-width="1.6"/>
+<text x="935.0" y="216.0" font-size="15" font-weight="600" fill="#1F2933" text-anchor="middle" >Locked test set</text>
+<text x="935.0" y="234.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >320 images, scored once</text>
+<rect x="60" y="300" width="240" height="84" rx="10" fill="#DCE8F5" stroke="#4C78A8" stroke-width="1.6"/>
+<text x="180.0" y="329.0" font-size="15" font-weight="600" fill="#1F2933" text-anchor="middle" >Custom CNN</text>
+<text x="180.0" y="347.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >6 conv blocks + GAP head</text>
+<text x="180.0" y="365.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >AdamW, 5 fold models</text>
+<rect x="310" y="300" width="240" height="84" rx="10" fill="#E6E6E6" stroke="#6B6B6B" stroke-width="1.6"/>
+<text x="430.0" y="329.0" font-size="15" font-weight="600" fill="#1F2933" text-anchor="middle" >SVM (RBF)</text>
+<text x="430.0" y="347.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >HOG + LBP + GLCM + histogram</text>
+<text x="430.0" y="365.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >one model on all dev data</text>
+<rect x="560" y="300" width="240" height="84" rx="10" fill="#FBE4D3" stroke="#E07B39" stroke-width="1.6"/>
+<text x="680.0" y="329.0" font-size="15" font-weight="600" fill="#1F2933" text-anchor="middle" >ResNet18</text>
+<text x="680.0" y="347.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >ImageNet init, full fine-tune</text>
+<text x="680.0" y="365.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >Optuna-tuned, 5 fold models</text>
+<polyline points="180,250 180,298" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="430,250 430,298" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="680,250 680,298" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="60" y="440" width="970" height="56" rx="10" fill="#E3F1E7" stroke="#3C8D5A" stroke-width="1.6"/>
+<text x="545.0" y="464.0" font-size="15" font-weight="600" fill="#1F2933" text-anchor="middle" >Evaluate</text>
+<text x="545.0" y="482.0" font-size="12.5" font-weight="400" fill="#52606D" text-anchor="middle" >pooled out-of-fold CV + locked test | 95% group-bootstrap CIs | paired differences</text>
+<polyline points="180,384 180,438" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="430,384 430,438" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="680,384 680,438" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<polyline points="935,250 935,438" fill="none" stroke="#8895A7" stroke-width="1.8" marker-end="url(#ah)"/>
+<text x="975" y="345" font-size="12" font-weight="400" fill="#52606D" text-anchor="middle" >scored once</text>
+</svg>

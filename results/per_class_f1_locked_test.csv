@@ -1,0 +1,6 @@
+class,CNN,SVM,ResNet18
+Endometrioma,0.84,0.699,0.812
+Normal_ovary,0.9,0.899,0.907
+PCO,0.95,0.898,0.941
+Serous_cystadenoma,0.754,0.667,0.794
+Teratoma,0.667,0.674,0.705
